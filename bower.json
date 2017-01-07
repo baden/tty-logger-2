@@ -1,0 +1,16 @@
+{
+  "name": "tty-logger-chrome-2",
+  "private": true,
+  "version": "0.0.0",
+  "dependencies": {
+    "angular": "1.2.16",
+    "d3": "~3.4.8",
+    "jquery-stylesheet": "~0.3.6",
+    "bootstrap": "~3.1.1",
+    "underscore": "~1.6.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  }
+}

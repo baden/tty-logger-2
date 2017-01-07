@@ -1,0 +1,263 @@
+@import "../bower_components/bootstrap/less/bootstrap.less";
+
+html, body {
+    overflow-y: hidden;
+    height:100%;
+}
+
+body {
+    /*background-color: #cfcfcf;*/
+    border: 1px solid black;
+}
+
+/*div {*/
+    /*border: 1px solid green;*/
+/*}*/
+
+.workspace {
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background-color: #333333;
+    font-family: 'Lucida Grande', 'Segoe UI', sans-serif;
+
+    background: url(../images/desktop-backgrounds-8686-9023-hd-wallpapers.jpg) repeat #fc0;
+    background-position: center;
+}
+
+.vertical {
+    display: -webkit-flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /*-webkit-flex: 1;*/
+    /*-webkit-flex-flow: column;*/
+    -webkit-flex-direction: column;
+}
+
+.tools {
+    position: relative;
+    padding: 6px;
+}
+
+    /*.tools ul {*/
+        /*margin: 0;*/
+    /*}*/
+
+
+.header {
+    /*margin: -11px -7px 9px -11px;*/
+    margin: 0;
+    padding: 4px;
+    /*background-color: #047479;*/
+    color: #FFF;
+    -webkit-app-region: drag;
+    font-size: 1.4em;
+    font-weight: bold;
+
+    background: rgb(165,0,2); /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  rgba(165,0,2,1) 1%, rgba(0,119,135,1) 40%, rgba(34,104,0,1) 59%, rgba(0,0,0,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right bottom, color-stop(1%,rgba(165,0,2,1)), color-stop(40%,rgba(0,119,135,1)), color-stop(59%,rgba(34,104,0,1)), color-stop(100%,rgba(0,0,0,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(-45deg,  rgba(165,0,2,1) 1%,rgba(0,119,135,1) 40%,rgba(34,104,0,1) 59%,rgba(0,0,0,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(-45deg,  rgba(165,0,2,1) 1%,rgba(0,119,135,1) 40%,rgba(34,104,0,1) 59%,rgba(0,0,0,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(-45deg,  rgba(165,0,2,1) 1%,rgba(0,119,135,1) 40%,rgba(34,104,0,1) 59%,rgba(0,0,0,1) 100%); /* IE10+ */
+    background: linear-gradient(135deg,  rgba(165,0,2,1) 1%,rgba(0,119,135,1) 40%,rgba(34,104,0,1) 59%,rgba(0,0,0,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a50002', endColorstr='#000000',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    opacity: 0.7;
+    box-shadow: 0px 0px 8px #000;
+
+}
+
+    .header .controls {
+        float: right;
+        -webkit-app-region: no-drag;
+        margin-top: -3px;
+    }
+
+        .header span.controls span {
+            transition: color 0.5s ease;
+            padding: 6px;
+            cursor: pointer;
+        }
+
+            .header span.controls span:hover {
+                /*box-shadow: 0px 0px 3px rgba(0,0,0,0.5);*/
+            }
+
+            .header span.controls span.exit:hover {
+                color: #ff8080;
+            }
+
+            .header span.controls span.minimize:hover {
+                color: #40ff40;
+            }
+
+            .header span.controls span.maximize:hover {
+                color: #00ffd0;
+            }
+
+
+.main {
+    position: relative;
+    /*display: -webkit-flex;*/
+    -webkit-flex: auto;
+    /*-webkit-flex-flow: column;*/
+}
+
+.port {
+    display: inline-block;
+}
+
+.port select {
+    width: 130px;
+    padding: 6px;
+}
+
+.port input[type=color] {
+    height: 34px;
+    vertical-align: bottom;
+}
+
+
+div.logcontainer {
+    /*position: absolute;*/
+    /*top: 200px;*/
+    transition: top 0.3s ease;
+    /*bottom: 6px;*/
+    /*left: 6px;*/
+    /*right: 6px;*/
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    /*border: 1px solid red;*/
+    /*background-color: #222;*/
+    opacity: 0.9;
+}
+
+    .logcontainer .logtools {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 48px;
+        padding: 6px;
+        /*border: 1px solid olive;*/
+    }
+
+        .logcontainer .logtools .shadow {
+            color: white;
+            text-shadow: 1px 1px 8px black;
+        }
+
+        .logcontainer .logtools .toolrow {
+
+        }
+
+            .logcontainer .logtools .toolrow .toolrowleft {
+                float: left;
+                margin-right: 10px;
+            }
+
+
+        .logcontainer .logtools ul.dropdown-menu-form {
+            padding: 5px 10px 5px 10px;
+            /*max-height: 300px;*/
+            /*overflow-y: scroll;*/
+        }
+
+            .logcontainer .logtools ul.dropdown-menu-form label {
+                font-weight: normal;
+            }
+
+
+pre.log {
+  position: absolute;
+  /*width: 100%;*/
+  /*height: 100%;*/
+  top: 48px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  clear: left;
+  margin: 4px;
+  /*min-height: 12px;*/
+  /*margin-top: 25px;*/
+  /*margin-top: 1em;*/
+  /*padding: 15px 0;*/
+  /*color: #f1f1f1;*/
+  font-family: monospace;
+  font-size: 14px;
+  /*line-height: 19px;*/
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  /*background-color: #222;*/
+  /*border: 1px solid #ddd;*/
+  /*overflow-x: scroll;*/
+  counter-reset: line-numbering;
+  overflow: auto;
+  border-radius: 6px;
+}
+
+    pre.log p {
+        padding: 0 15px 0px 35px;
+        margin: 0;
+        min-height: 16px;
+        font-weight: bold;
+    }
+
+        pre.log p a {
+            display: inline-block;
+            text-align: right;
+            min-width: 40px;
+            margin-left: -33px;
+            cursor: pointer;
+            text-decoration: none;
+            font-weight: normal;
+        }
+
+        pre.log p a::before {
+            content: counter(line-numbering, decimal);
+            counter-increment: line-numbering;
+            padding-right: 1em;
+        }
+
+        pre.log p span.datetime {
+            display: inline-block;
+            width: 70px;
+            font-weight: normal;
+            /*background-color: green;*/
+        }
+
+        pre.log p span.delta {
+            display: inline-block;
+            width: 70px;
+            text-align: right;
+            padding-right: 6px;
+            font-weight: normal;
+            /*color: #f1f1cc;*/
+            /*background-color: magenta;*/
+        }
+        pre.log p span.delta:before {
+            content: '+';
+            font-weight: normal;
+        }
+
+        .toolrowleft {
+            float: left;
+        }
+
+#closing {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 300px;
+    z-index: 1000;
+    background-color: gray;
+    color: white;
+    padding: 50px;
+    font-size: 4em;
+    margin: 0 auto;
+}

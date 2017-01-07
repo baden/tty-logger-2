@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "tty-logger-chrome-2",
+    "description": "The name of the application"
+  },
+  "appDescription": {
+    "message": "TTY Logger for Google Chrome",
+    "description": "The description of the application"
+  }
+}
